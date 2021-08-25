@@ -1,0 +1,38 @@
+@use './colors' as *;
+@use './medias' as *;
+@use './buttons' as *;
+
+.hero-image {
+    background-image: url('../img/hero__blogger.jpg');
+    background-color: rgb(50, 50, 50);
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    height: 600px;
+    max-width: 1000px;
+    margin: 10px auto 0 auto;
+    padding: 0 80px;
+    h1 {
+        color: $primarySeven;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .buttons-hero {
+        display: none;
+        justify-content: space-between;
+        @include desktop {   
+            display: flex;
+         }
+        .button-hero {
+            @include button-primary;
+        }
+        span {
+            color: $primarySix;
+            font-size: 1.2rem;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@use './colors' as *;
+
+.titulo {
+    margin: 15px auto;
+    width: 90%;
+    .linea {
+        height: 4px;
+        background-color: $primaryTwo;
+        width: 60px;
+    }
+}

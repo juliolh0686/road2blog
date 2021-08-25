@@ -1,0 +1,119 @@
+@use './colors' as *;
+@use './medias' as *;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 1000px;
+    padding: 10px 15px;
+    height: 60px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba($primarySix, 0.2);
+    &__logo {
+        display: flex;
+        align-items: center;
+        width: 20%;
+    }
+    &__img {
+        width: 130px;
+    }
+    .header__nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 60%;
+        .navmenu {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .navbutton {
+            width: 40px;
+            height: 40px;
+            color: $primaryFive;
+            font-size: 20px;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            background-color: $primarySeven;
+            &:focus:not(:focus-visible){
+                outline: none;
+            }
+            @include desktop {
+                display: none;
+            }
+        }
+        .navmenu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            list-style: none;
+            background-color: rgba($primaryTwo, 0.9);
+            position: fixed;
+            left: 100%;
+            top: 60px;
+            width: 100%;
+            padding: 20px 0;
+            height: calc(100% - 60px);
+            overflow-y: auto;
+            transition: left 0.3s;
+            z-index: 100;
+            @include desktop {
+                flex-direction: row;
+                background-color: initial;
+                position:initial;
+                top: initial;
+                width: initial;
+                padding: 0;
+                height: initial;
+                overflow-y: auto;
+                z-index: 100;
+            }
+            &__item {
+                font-size: 1.5rem;
+                margin: 0 10px;
+                line-height: 70px;
+                width: max-content;
+                .navmenu__link {
+                    padding: 8px 12px;
+                    border-radius: 3px;
+                    color: $primarySeven;
+                    text-decoration: none;
+                    font-weight: 900;
+                    @include desktop {
+                        color: $primarySix;
+                        padding: initial;
+                        border-radius: initial;
+                    }
+                    &:hover,
+                    &--active {
+                        background:none;
+                        color: $primaryFive;
+                        @include desktop {
+                            color: $primaryTwo;
+                        }
+                    }
+                }
+            }
+        }
+        .visible{
+            left: 0;
+        }
+        .header__icon {
+            border: none;
+            width: 40px;
+            height: 40px;
+            background-color: $primarySeven;
+            font-size: 1.6rem;
+            cursor: pointer;
+        }
+    }
+    &__icon {
+        display: none;
+        @include desktop {   
+            display: initial;
+         }
+    }
+}

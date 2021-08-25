@@ -1,0 +1,55 @@
+@use "./colors" as *;
+@use './buttons' as *;
+@use './item02' as *;
+@use './medias' as *;
+
+.recent-articles {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    h2 {
+        color: $primaryTwo;
+    }
+    .recent-articles__hero {
+        background-image: url('../img/blog__principal.jpg');
+        background-color: rgb(50, 50, 50);
+        background-blend-mode: soft-light;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:cover;
+        height: 500px;
+        padding: 0 60px;
+        margin-bottom: 30px;
+        @include desktop {
+            margin: 10px auto 30px auto;
+            max-width: 90%;
+        }
+        h1 {
+            color: $primarySeven;
+            height: 90%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        .button-recent-articles{
+            display: flex;
+            justify-content: space-between;
+            span {
+                color: $primarySeven;
+            }
+            button {
+                @include button-primary;
+            }
+        }
+    }
+    .button-recent-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5%;
+        width: 100%;
+        margin: 0 auto;
+        @include item02;
+    }
+}
+

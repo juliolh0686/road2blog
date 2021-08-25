@@ -1,0 +1,22 @@
+@use './colors' as *;
+@use './buttons' as *;
+@use './item' as *;
+@use './medias' as *;
+
+.newitems {
+    max-width: 1000px;
+    margin: 0 auto;
+    h2 {
+        color: $primaryTwo;
+    }
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10%;
+        justify-content: center;
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
+        @include item;
+    }
+}

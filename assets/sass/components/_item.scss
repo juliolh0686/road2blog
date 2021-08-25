@@ -1,0 +1,56 @@
+@use './colors' as *;
+@use './buttons' as *;
+
+@mixin item {
+    .item {
+        margin-bottom: 40px;
+        max-width: 400px;
+        &__image {
+            position: relative;
+            img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+            }
+            span {
+                color: $primarySeven;
+                position: absolute;
+                left: 0;
+                top: 75%;
+                width: auto;
+                height: 30px;
+                border-radius: 5px;
+                font-size: 1.2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 15px;
+            }
+            .span01 {
+                background-color: $primaryThree;
+            }
+            .span02 {
+                background-color: $primaryFour;
+            }
+            .span03 {
+                background-color: $primaryFive;
+            }
+        }
+        p {
+            color: $primaryFive ;
+        }
+        .item__bootom {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 15px;
+            span {
+                color: $primarySix;
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+            button {
+                @include button-primary;
+            }
+        }
+    }
+}
