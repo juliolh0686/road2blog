@@ -1,9 +1,11 @@
 # Reto N°01 - Road2Dev
 
 Desktop
+>
 ![Desktop](https://raw.githubusercontent.com/juliolh0686/road2blog/main/img01.jpg)
 >
 Mobile
+>
 ![Mobile](https://raw.githubusercontent.com/juliolh0686/road2blog/main/img02.jpg)
 
 > Desarrollo de blog Road2Dev, reto N°1 de la comunidad.
